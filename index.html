@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Crowdsourcing Railroads - Postcard Upload</title>
+
+<style>
+
+body {
+  font-family: sans-serif;
+}
+
+#question {
+  font-size: 45px;
+  color: #DC3522;
+  text-align: center;
+}
+
+</style>
+
+<script src="lib/underscore-min.js"></script>
+
+<body>
+
+<h2>Crowdsourcing Postcards</h2>
+
+<div id="question"></div>
+
+<p><a href="#">Upload Your Photos</a></p>
+
+<script>
+
+var data = ["Upload photos from any time period.",
+            "Upload photos from 1850-1880."];
+
+data2 = _.sample(data,1);
+
+document
+  .getElementById("question")
+  .innerHTML += '<p>' + data2 + '</p>';
+
+// console.log(data2);
+
+</script>
+
+</body>
+</html>
